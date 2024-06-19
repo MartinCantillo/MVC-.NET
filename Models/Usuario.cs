@@ -1,18 +1,22 @@
+namespace Models
+{
+    
 
 public class Usuario
 {
-    public Usuario(int _id, string _nome, string _apellido, string _cargo)
+    public Usuario(int id, string nome, string apellido, string cargo)
     {
-        this._id = _id;
-        this._nome = _nome;
-        this._apellido = _apellido;
-        this._cargo = _cargo;
+        this.id = id;
+        this.nome = nome;
+        this.apellido = apellido;
+        this.cargo = cargo;
     }
 
-    private int _id { set; get; }
-    private string _nome { set; get; }
+    public  int id { set; get; }
+    public string nome { set; get; }
 
-    private string _apellido { set; get; }
+    public string apellido { set; get; }
 
-    private string _cargo { set; get; }
+    public string cargo { set; get; }
+}
 }

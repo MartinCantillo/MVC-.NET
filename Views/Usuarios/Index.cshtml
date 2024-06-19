@@ -1,1 +1,26 @@
-<h1>Usuario welcom</h1>
+@using Models
+@{
+    //Aqui dentro del @ va puro codigo C#
+    //Layout = null;
+    //Creo la lista de usuarios del controlador, estos asignandole a la lista de usuarios el view data del controlador en la llave Usuarios
+
+    List<Usuario> Usuarios=(List<Usuario>) ViewData["Usuarios"];
+        int total =Usuarios.Count;
+}
+
+<table class=" table table-striped">
+<header>
+      <th> id</th>
+    <th> Nombre</th>
+    <th> apellido</th>
+     <th> cargo</th>
+</header>
+@for(int i = 0; i<=total-1; i++){
+<tr>
+    <td>@Usuarios[i].id</td>
+     <td>@Usuarios[i].nome</td>
+       <td>@Usuarios[i].apellido</td>
+       <td>@Usuarios[i].cargo</td>
+</tr>
+}
+</table>
